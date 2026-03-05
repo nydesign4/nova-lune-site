@@ -20,11 +20,13 @@ h1{
     margin: 0 auto;
     text-align: center;
 }
-
+.containar{
+    padding-top: 250px;
+}
 main{
     padding-top: 80px;
 }
-.top main{
+body.top main{
     padding-top: 0;
 }
 
@@ -37,9 +39,6 @@ img{
     background-position: center;
 }
 
-.containar{
-    padding-top: 250px;
-}
 header{
     background-color:#554717;
     position: fixed;
@@ -47,6 +46,9 @@ header{
     left: 0;
     width: 100%;
     z-index: 1000;
+}
+main.content{
+    padding-top: 80px;
 }
 .header{
     display: flex;
@@ -152,17 +154,19 @@ h2:not(.line-tittle){
     justify-content: center;/*フレックスアイテム間の左右のスペース*/
     align-items: center;/*フレックスアイテム間の上下の揃え方*/
     padding-bottom: 100px;
-    width: 100%;   
+    width: 100%; 
+    gap:30px;  
 }
 
 .line-tittle::before,
 .line-tittle::after{
     content: '';
     flex: 1;
+    min-width: 30px;
     max-width: 200px;
     height: 2px;
     background: #E3DFDF;
-    margin: 0 45px;
+    margin: 0;
 }
 
 p{
@@ -171,6 +175,9 @@ p{
     padding-bottom: 100px;
     letter-spacing: 0.1em;/*行間*/
     line-height: 3em;/*行の高さ*/
+}
+.pc-br{
+    display: inline;
 }
 
 .menu-list{
@@ -199,14 +206,15 @@ p{
     padding-bottom: 30px;
 }
 .content{
-    width: 100%;
     max-width: 1100px;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
+    padding: 0 20px;
 }
-
-
-
+.containar-news{
+    padding-top: 150px;
+}
 .news{
     display: flex;
     flex-direction: column;
@@ -230,13 +238,12 @@ p{
     display: inline-block;
     width: 5em;
     text-align: left;
-    margin: 30px;
+    margin: 30px 10px;
 }
 .news-main{
     display: inline-block;
     text-align: left;
-    margin-left: 2em;
-    margin: 30px;
+    margin: 30px 10px;
 }
 .pnpl_juice{
     text-align: center;
@@ -339,7 +346,7 @@ footer{
 
 @media screen and (max-width:768px){
     .containar{
-        padding: 80px;
+        padding: 30px;
     }
     h1{
         font-size: 24px;
@@ -351,16 +358,27 @@ footer{
 h2:not(.line-tittle){
     padding-top: 30px;
 }
+.line-tittle::before,
+.line-tittle::after{
+    margin: 0 15px;
+}
+.line-tittle{
+    padding-bottom: 50px;
+    gap: 8px;
+}
 p{
     font-size: 16px;
     text-align: center;
 }
+.pc-br{
+    display: none;
+}
 .header .logo{
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
 }
 .slider{
-    height: 50vh;
+    height: 320px;
 }
 .slides{
     width: 100%;
@@ -372,26 +390,39 @@ p{
     align-items: center;
     gap:20px;
 }
+.slide.active{
+    height: 320px;
+    object-fit: cover;
+}
 .navigation{
     display: flex;
-    gap:50px;
+    gap:70px;
 }
-.prev, .next{
-    width: 30px;
+.hover-zoom.prev, .hover-zoom.next{
+    width: 40px;
     cursor: pointer;
-}
-.navigation .carousel{
-    max-width: 980px;
 }
 
 h2::before
 h2::after{
     max-width: 120px;
 }
-
+p.menu-name{
+    padding-bottom: 50px;
+}
 .menu-list{
     grid-template-columns: 1fr;
     justify-items: center;
+}
+.news-list{
+    display: block;
+}
+.news-date{
+    width: auto;
+    margin-bottom: 5px;
+}
+.news-main{
+    width: auto;
 }
 .news-list a{
     white-space: nowrap;
@@ -409,7 +440,7 @@ h4{
     display: block;
 }
 .news-btn{
-    width: 40%;
+    width: 50%;
 }
 .pnpl_juice-img{
     max-width: 80%;
@@ -419,6 +450,9 @@ h4{
     padding-bottom: 10px;
     position: relative;
     z-index: 10;
+}
+#btn-top{
+    width: 10%;
 }
 .copyright{
     padding: 18px 0;
