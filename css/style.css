@@ -48,7 +48,7 @@ header{
     z-index: 1000;
 }
 main.content{
-    padding-top: 80px;
+    padding: 80px 20px;
 }
 .header{
     display: flex;
@@ -210,7 +210,6 @@ p{
     width: 100%;
     margin: 0 auto;
     text-align: center;
-    padding: 0 20px;
 }
 .containar-news{
     padding-top: 150px;
@@ -426,7 +425,7 @@ p.menu-name{
     white-space: nowrap;
 }*/
 .containar-news{
-    padding: 30px;
+    padding: 10px;
 }
 h4{
     left: 0;
