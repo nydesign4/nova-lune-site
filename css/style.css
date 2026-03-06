@@ -343,10 +343,12 @@ footer{
 
 
 
-
 @media screen and (max-width:768px){
     .containar{
         padding: 30px;
+    }
+    .content{
+        width: 85%;
     }
     h1{
         font-size: 24px;
@@ -414,18 +416,17 @@ p.menu-name{
     grid-template-columns: 1fr;
     justify-items: center;
 }
-.news-list{
+/*.news{
+    flex-direction: column;
+}
+/*.news-list{
     display: block;
 }
-.news-date{
-    width: auto;
-    margin-bottom: 5px;
-}
-.news-main{
-    width: auto;
-}
-.news-list a{
+/*.news-list a{
     white-space: nowrap;
+}*/
+.containar-news{
+    padding: 30px;
 }
 h4{
     left: 0;
@@ -443,7 +444,7 @@ h4{
     width: 50%;
 }
 .pnpl_juice-img{
-    max-width: 80%;
+    max-width: 90%;
     height: auto;
 }
 .footer-top{
